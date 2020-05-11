@@ -14,13 +14,25 @@ class ToScrapeSpiderXPath(scrapy.Spider):
             yield {
                 'title': crime.extract()
             }
-        #basically trying to make it only go one page past the start page   
+         
         
         
             #then loops through all links in section2? and passes the link into the parser
-        for href in response.xpath('//html/body/main/div/section/section[1]/p/a/@href'):
+        for href in response.xpath('//html/body/main/div/section/section[1]/p/a'):
             
-            yield scrapy.Request(response.urljoin(href.extract()))
+            #checks text associated with link for word "Repealed" and only follows link if word not found
+            linkText = str(href.xpath('./text()').extract())
+            
+            if "Repealed" not in linkText:
+                link = str(href.xpath('./@href').extract())
+                link = link[2:-2]
+                yield scrapy.Request(response.urljoin(link)) 
+                
+
+            
+            
+           
+            
             
         
 
