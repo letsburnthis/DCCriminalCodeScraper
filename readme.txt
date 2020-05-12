@@ -25,7 +25,7 @@ address : web URL that the info in the dictionary was pulled from.
 The text in each dictionary should in theory line up with each title int he page.
 ie.
 
-search.titles[2] should give the title (heading) that the sentencing info from search.text[2] corrisponds with.
+search.titles[2] "should" give the title (heading) that the sentencing info from search.text[2] corrisponds with.
 
 There are many headings on these pages that have no sentencing info. In that case, the text list contains an empty string.
 There are some headings that have multiple <p></p> with sentencing info so each new <p></p> starts with "NEW PARAGRAPH" just to be able to identify when that is occuring.
