@@ -22,7 +22,7 @@ text : list of any <p></p> of text that includes sentencing information, each it
 address : web URL that the info in the dictionary was pulled from.
 
 
-The text in each dictionary should in theory line up with each title int he page.
+The text in each dictionary should in theory line up with each title in the page.
 ie.
 
 search['titles'][2] "should" give the title (heading) that the sentencing info from search['text'][2] corrisponds with.
