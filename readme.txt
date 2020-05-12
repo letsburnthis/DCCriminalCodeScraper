@@ -1,4 +1,5 @@
 scrapy that pulls info from the D.C. Criminal Code at https://code.dccouncil.us/dc/council/code/titles/22/
+code is heavily commented to explain what is going mainly because I know I'll forget what it does and how it works.
 
 to run and output a json with a list of dictionaries
 'scrapy crawl crimes -o crimes.json'
