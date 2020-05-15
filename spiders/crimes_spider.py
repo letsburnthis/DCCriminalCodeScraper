@@ -73,7 +73,7 @@ class ToScrapeSpiderXPath(scrapy.Spider):
                 yield {
                     'chapter':crime.xpath('./h1/text()').get(),
                     'titles': crime.xpath('./section[2]/h1/text()').getall(),
-                    'text': prisonText,
+                    'texts': prisonText,
                     'address': response.request.url
                     }
 
